@@ -77,7 +77,7 @@ namespace FactionColonies
 
         public new float TradePriceImprovementOffsetForPlayer => trader?.TradePriceImprovementOffsetForPlayer ?? 0.0f;
 
-        public new TradeCurrency TradeCurrency => TraderKind.tradeCurrency;
+        public new TradeCurrency TradeCurrency => TraderKind?.tradeCurrency ?? TradeCurrency.Silver;
 
         public new bool EverVisited => trader.EverVisited;
 

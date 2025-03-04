@@ -80,7 +80,12 @@ namespace FactionColonies
         {
             get
             {
-                return BaseTraderKinds.Any() ? BaseTraderKinds[Mathf.Abs(settlement.HashOffset()) % BaseTraderKinds.Count] : null;
+                if (BaseTraderKinds == null || !BaseTraderKinds.Any())
+                {
+                    Log.Error("BaseTraderKinds is null or empty.");
+                    return null;
+                }
+                return BaseTraderKinds[Mathf.Abs(settlement.HashOffset()) % BaseTraderKinds.Count];
             }
         }
 
