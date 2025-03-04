@@ -15,9 +15,6 @@ using LudeonTK;
 
 namespace FactionColonies
 {
-    
-
-
     public class FactionColonies : ModSettings
     {
         private Faction playerFactionRef = null;
